@@ -129,11 +129,11 @@ This project leverages the CK+ dataset and a CNN model implemented in MATLAB to 
 
 ---
 
-### Live Camera Integration
+### USB Camera Integration
 
-The trained model is used for real-time emotion detection using a webcam or IP camera.
+The trained model is used for real-time emotion detection using a USB webcam (or IP camera).
 
-- **Webcam Example**:
+- ** USB Webcam Example**:
   ```matlab
   camera = webcam(1);
   while true
@@ -168,5 +168,3 @@ The trained model is used for real-time emotion detection using a webcam or IP c
 - MATLAB and its toolboxes for facilitating deep learning and computer vision.
 
 --- 
-
-Enjoy building your own emotion detection system! 🚀
