@@ -22,10 +22,10 @@ This repository contains MATLAB code for building and deploying a Convolutional 
 
 This project leverages the CK+ dataset and a CNN model implemented in MATLAB to classify emotions into one of seven categories. The final model is capable of processing real-time images from a live camera feed to detect emotions.
 ## Screenshot 1: screenshot01.png
-<img src="screenshot01.png" alt="Screenshot 01" width="640" height="480">
+<img src="screenshot01.png" alt="Screenshot 01" width="840" height="480">
 
 ## Screenshot 2: screenshot02.png
-<img src="screenshot02.png" alt="Screenshot 02" width="640" height="480">
+<img src="screenshot02.png" alt="Screenshot 02" width="840" height="480">
 ---
 
 ### Workflow Overview
