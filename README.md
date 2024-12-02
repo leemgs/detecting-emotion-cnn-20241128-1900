@@ -1,8 +1,9 @@
 # README.md
 
-## Emotion Detection Using CNN Model and MATLAB R2024b 
+## Emotion Detection Using CNN Model and MATLAB 2024b 
 
-This repository contains MATLAB code for building and deploying a Convolutional Neural Network (CNN) to detect emotions from images. The workflow includes dataset preparation, model training, validation, and live camera integration for real-time emotion detection.
+This repository contains MATLAB code for building and deploying a Convolutional Neural Network (CNN) to detect emotions from images. 
+The workflow includes dataset preparation, model training, validation, and live camera integration for real-time emotion detection.
 
 ---
 
@@ -103,7 +104,7 @@ This project leverages the CK+ dataset and a CNN model implemented in MATLAB to 
 
 #### 3. **Training the Model**
 - **Options**:
-  - Learning rate: 0.01
+  - Learning rate: 0.01 (or 0.02)
   - Maximum epochs: 10
 
 - **Script**:
@@ -149,7 +150,7 @@ The trained model is used for real-time emotion detection using a USB webcam (or
 
 - **IP Camera Example**:
   ```matlab
-  camera = ipcam('http://192.168.225.88:8080/video');
+  camera = ipcam('http://192.168.10.75:8080/video');
   ```
 
 ---
