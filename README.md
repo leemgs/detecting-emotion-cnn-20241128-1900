@@ -86,7 +86,7 @@ This project leverages the CK+ dataset and a CNN model implemented in MATLAB to 
 
 ![My network model architecture](my-model-architecture.jpg)
 
-I've created a flowchart that visualizes the neural network architecture you provided. Let me break down the key aspects of the diagram:
+I have created a flowchart to visualize the neural network architecture. Let me break down the key aspects of the diagram:
 
 1. The network starts with an input layer of 48x48x1 grayscale images
 
