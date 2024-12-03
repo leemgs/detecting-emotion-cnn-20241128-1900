@@ -83,6 +83,29 @@ This project leverages the CK+ dataset and a CNN model implemented in MATLAB to 
 - The dataset is divided into training (80%) and validation (20%) subsets.
 
 #### 2. **CNN Architecture**
+
+[My network model architecture](my-model-architecture.jpg)
+
+I've created a flowchart that visualizes the neural network architecture you provided. Let me break down the key aspects of the diagram:
+
+1. The network starts with an input layer of 48x48x1 grayscale images
+
+2. It goes through 5 convolutional layers:
+
+2.1 Progressively increasing number of filters (8 → 16 → 32 → 64 → 128)
+
+2.2 Each layer uses 3x3 filters with same padding
+
+2.3 Followed by batch normalization and ReLU activation
+
+3. Max pooling layers (2x2 with stride 2) are used after some convolutional layers to reduce spatial dimensions
+
+4. The final layers include:
+A fully connected layer with 512 units
+Another fully connected layer with 7 units
+Softmax layer to convert to probabilities
+Classification layer for the 7 classes
+
 - **Key Features**:
   - Input layer for 48x48 grayscale images.
   - 5th convolutional layers with ReLU activation and max pooling.
