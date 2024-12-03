@@ -31,7 +31,7 @@ lsmod | grep v4l2
 
 #### **2. Create and Run the Python Script for Fake Frames**
 
-Create a Python script named `red_blue.py`:
+Create a Python script named `red_blue.py`. The red color represents the situation when a person's face appears angry, while the blue color represents the situation when a person's face looks pale.
 
 ```bash
 vi ./emotion-red-blue.py
