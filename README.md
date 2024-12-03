@@ -66,7 +66,7 @@ This project leverages the CK+ dataset and a CNN model implemented in MATLAB to 
    - Check the accuracy and confusion matrix using the validation dataset.
 
 5. **Real-Time Detection**:
-   - Use a connected webcam or IP camera for real-time emotion detection.
+   - Use a connected (fake) webcam or IP camera for real-time emotion detection.
 
 ---
 
@@ -85,7 +85,7 @@ This project leverages the CK+ dataset and a CNN model implemented in MATLAB to 
 #### 2. **CNN Architecture**
 - **Key Features**:
   - Input layer for 48x48 grayscale images.
-  - Three convolutional layers with ReLU activation and max pooling.
+  - 5th convolutional layers with ReLU activation and max pooling.
   - Fully connected layer with seven output units for emotion classes.
 
 - **Script**:
@@ -104,14 +104,14 @@ This project leverages the CK+ dataset and a CNN model implemented in MATLAB to 
 
 #### 3. **Training the Model**
 - **Options**:
-  - Learning rate: 0.01 (or 0.02)
-  - Maximum epochs: 10
+  - Learning rate: 0.02
+  - Maximum epochs: 20
 
 - **Script**:
   ```matlab
   options = trainingOptions('sgdm', ...
-      'InitialLearnRate', 0.01, ...
-      'MaxEpochs', 10, ...
+      'InitialLearnRate', 0.02, ...
+      'MaxEpochs', 20, ...
       'Shuffle', 'every-epoch', ...
       'ValidationFrequency', 10, ...
       'Verbose', false, ...
