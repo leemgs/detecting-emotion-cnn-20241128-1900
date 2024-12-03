@@ -34,7 +34,7 @@ lsmod | grep v4l2
 Create a Python script named `red_blue.py`:
 
 ```bash
-vi ./red_blue.py
+vi ./emotion-red-blue.py
 ```
 
 Add the following code to generate alternating red and blue frames:
