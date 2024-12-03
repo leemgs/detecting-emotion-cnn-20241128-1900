@@ -165,6 +165,13 @@ Detailed explanations and source code can be found in the [fake-usb-camera](fake
 2. **Confusion Matrix**: Provides a visual representation of model performance.
 3. **Real-Time Predictions**: Displays live webcam feed with detected emotion as the title.
 
+
+
+### DEMO 
+* Play time: 2m 40seconds
+![Real-Time Emotion Recognition Demo](real-time-emotion-recognition.gif)
+
+
 ---
 
 ### Acknowledgments
