@@ -93,13 +93,11 @@ I have created a flowchart to visualize the neural network architecture. Let me 
 1. The network starts with an input layer of 48x48x1 grayscale images
 
 2. It goes through 5 convolutional layers:
-
+```bash
  * Progressively increasing number of filters (8 → 16 → 32 → 64 → 128)
-
  * Each layer uses 3x3 filters with same padding
-
  * Followed by batch normalization and ReLU activation
-
+```
 3. Max pooling layers (2x2 with stride 2) are used after some convolutional layers to reduce spatial dimensions
 
 4. The final layers include:
