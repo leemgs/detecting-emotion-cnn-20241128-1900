@@ -65,7 +65,7 @@ while True:
 Save and exit the editor. Then run the script:
 
 ```bash
-python3 ./red_blue.py
+python3 ./emotion-red-blue.py
 ```
 
 ---
