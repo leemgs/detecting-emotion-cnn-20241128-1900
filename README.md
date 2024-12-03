@@ -47,7 +47,7 @@ This project leverages the CK+ dataset and a CNN model implemented in MATLAB to 
    - Computer Vision Toolbox
 2. CK+ dataset from Kaggle:
    - [CK+ Dataset on Kaggle](https://www.kaggle.com/datasets/shawon10/ckplus)
-3. Webcam or IP Camera for real-time testing.
+3. (Fake) Webcam or IP Camera for real-time testing.
 
 ---
 
@@ -133,10 +133,14 @@ This project leverages the CK+ dataset and a CNN model implemented in MATLAB to 
 ### USB Camera Integration
 
 The trained model is used for real-time emotion detection using a USB webcam (or IP camera).
+We will use a method that emulates a real USB camera to develop effectively. 
+Pre-prepared image files will be used as input for the fake camera device file to capture frames. 
+This method has been tested and reproduced on Ubuntu 22.04 and Ubuntu 24.04 versions. 
+Detailed explanations and source code can be found in the [fake-usb-camera](fake-usb-camera) folder.
 
-- ** USB Webcam Example**:
+- **USB Webcam Example**:
   ```matlab
-  camera = webcam(1);
+  camera = webcam(20);
   while true
       im = camera.snapshot;
       picture = rgb2gray(im);
