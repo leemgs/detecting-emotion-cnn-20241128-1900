@@ -170,6 +170,6 @@ Detailed explanations and source code can be found in the [fake-usb-camera](fake
 ### Acknowledgments
 
 - CK+ dataset provided by Kaggle.
-- (MATLAB 2024B)[https://matlab.mathworks.com/] and its toolboxes for facilitating deep learning and computer vision.
+- [MATLAB 2024B](https://matlab.mathworks.com/) and its toolboxes for facilitating deep learning and computer vision.
 
 --- 
