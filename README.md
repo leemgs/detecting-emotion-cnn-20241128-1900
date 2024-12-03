@@ -1,5 +1,7 @@
 # README.md
 
+[![View Real-Time Emotion Recognition from USB Camera with Deep CNNs on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://kr.mathworks.com/matlabcentral/fileexchange/176528-real-time-emotion-recognition-from-usb-camera-with-deep-cnns)
+
 ## Real-Time Emotion Recognition from USB Camera with Deep CNNs
 
 This repository contains MATLAB code for building and deploying a Convolutional Neural Network (CNN) to detect emotions from images. 
