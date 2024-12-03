@@ -169,6 +169,7 @@ Detailed explanations and source code can be found in the [fake-usb-camera](fake
 
 ### DEMO 
 * Play time: 2m 40seconds
+
 ![Real-Time Emotion Recognition Demo](real-time-emotion-recognition.gif)
 
 
