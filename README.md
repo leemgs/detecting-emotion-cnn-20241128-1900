@@ -38,7 +38,7 @@ This project leverages the CK+ dataset and a CNN model implemented in MATLAB to 
 3. **CNN Architecture**: A custom CNN is defined with convolutional, pooling, and fully connected layers.
 4. **Training**: The model is trained using the Stochastic Gradient Descent with Momentum (SGDM) optimizer.
 5. **Validation**: Accuracy and confusion matrix are used to evaluate the model's performance.
-6. **Live Camera Integration**: The trained model is deployed to classify emotions from live webcam input.
+6. **USB Camera Integration**: The trained model is deployed to classify emotions from live webcam input.
 
 ---
 
@@ -77,7 +77,7 @@ This project leverages the CK+ dataset and a CNN model implemented in MATLAB to 
 #### 1. **Dataset Preparation**
 - **Script**:
   ```matlab
-  folderPath = 'CK+48';
+  folderPath = 'datasets/CK+48';
   imds = imageDatastore(folderPath, 'IncludeSubfolders', true, 'LabelSource', 'foldernames');
   [imdstrain, imdsvalid] = splitEachLabel(imds, 0.8, 'randomize');
   ```
@@ -157,7 +157,7 @@ Classification layer for the 7 classes
 
 The trained model is used for real-time emotion detection using a USB webcam (or IP camera).
 We will use a method that emulates a real USB camera to develop effectively. 
-Pre-prepared image files will be used as input for the fake camera device file to capture frames. 
+Pre-prepared jpeg image files will be used as input for the fake camera device file to capture frames. 
 This method has been tested and reproduced on Ubuntu 22.04 and Ubuntu 24.04 versions. 
 Detailed explanations and source code can be found in the [fake-usb-camera](fake-usb-camera) folder.
 
@@ -191,7 +191,7 @@ Detailed explanations and source code can be found in the [fake-usb-camera](fake
 
 
 ### DEMO 
-* Play time: 2m 40seconds
+* Play time: 2m 40secs
 
 ![Real-Time Emotion Recognition Demo](real-time-emotion-recognition.gif)
 
