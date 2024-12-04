@@ -2,6 +2,10 @@
 
 [![View Real-Time Emotion Recognition from USB Camera with Deep CNNs on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://kr.mathworks.com/matlabcentral/fileexchange/176528-real-time-emotion-recognition-from-usb-camera-with-deep-cnns)
 
+[![GitHub license](https://dmlc.github.io/img/apache2.svg)](LICENSE) 
+![Gitter](https://img.shields.io/gitter/room/leemgs/detecting-emotion-cnn-20241128-1900) ![GitHub repo size](https://img.shields.io/github/repo-size/leemgs/detecting-emotion-cnn-20241128-1900) ![GitHub issues](https://img.shields.io/github/issues/leemgs/detecting-emotion-cnn-20241128-1900) ![GitHub pull requests](https://img.shields.io/github/issues-pr/leemgs/detecting-emotion-cnn-20241128-1900) ![GitHub contributors](https://img.shields.io/github/contributors/leemgs/detecting-emotion-cnn-20241128-1900)
+
+
 ## Real-Time Emotion Recognition from USB Camera with Deep CNNs
 
 This repository contains MATLAB code for building and deploying a Convolutional Neural Network (CNN) to detect emotions from images. 
