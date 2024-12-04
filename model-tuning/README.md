@@ -1,12 +1,12 @@
-# 다중 컨볼루션 레이어와 드롭아웃을 활용한 고정확도 CNN 모델: 99.2% Accuracy on Test
-이 모델은 48x48 크기의 컬러 이미지를 입력으로 받아 다중 컨볼루션 레이어와 드롭아웃, 배치 정규화를 통해 7개의 클래스로 분류하는 심층 합성곱 신경망(CNN)입니다.
-모델은 총 8개의 컨볼루션 레이어로 구성되어 있으며, 각 컨볼루션 레이어 다음에는 ReLU 활성화 함수가 적용됩니다. 
-또한, 드롭아웃 레이어를 통해 과적합을 방지하고, 배치 정규화를 통해 학습 과정을 안정화시킵니다. 마지막으로, 완전 연결 레이어와 소프트맥스 레이어를 통해 최종 분류 결과를 도출합니다.
+# High-accuracy CNN model with multiple convolutional layers and dropout: 99.2% Acceleration Test
+The model is a deep convolutional neural network (CNN) that takes 48x48 size color images as input and classifies them into seven classes with multiple convolutional layers, dropout, and batch normalization.
+The model consists of a total of eight convolutional layers, each of which is followed by a ReLU activation function. 
+Furthermore, we prevent overfitting through dropout layers, and stabilize the learning process through batch normalization. Finally, we derive the final classification results through fully connected and softmax layers.
 
 # Model Architecture
-아래 코드는 MATLAB에서 작성된 CNN(Convolutional Neural Network) 모델의 아키텍처를 정의하는 코드입니다. 
-이 모델은 48x48 크기의 컬러 이미지를 입력으로 받아 7개의 클래스로 분류하는 작업을 수행합니다. 
-이 모델로 학습후에 이미지들을 추론하였을때 99.2%의 정확도를 달성하였습니다. 
+The code below defines the architecture of the Convolutional Neural Network (CNN) model written by MATLAB. 
+The model takes 48x48 color images as inputs and classifies them into seven classes. 
+When the images were inferred after training with this model, 99.2% accuracy was achieved.
 
 ```bash
 layers = [
@@ -96,239 +96,154 @@ options = trainingOptions('sgdm', ...
 	
 ```	
 
+# Model Description
+The code above defines the architecture of the Convolutional Neural Network (CNN) model written by MATLAB.
+The model takes 48x48 color images as inputs and classifies them into seven classes. 
 
-# 모델 설명
-위의 코드는 MATLAB에서 작성된 CNN(Convolutional Neural Network) 모델의 아키텍처를 정의하는 코드입니다.
-이 모델은 48x48 크기의 컬러 이미지를 입력으로 받아 7개의 클래스로 분류하는 작업을 수행합니다. 
-
-### 1. Image Input Layer
+#### 1. Image Input Layer
 ```bash
 imageInputLayer([48 48 3])
 ```
-- **입력 이미지 크기**: 48x48 크기의 컬러 이미지를 입력으로 받습니다. 컬러 이미지이므로 채널 수는 3입니다.
+- **Input image size**: Take a 48x48 color image as input. As it is a color image, the number of channels is 3.
 
-### 2. First Convolutional Layer
+#### 2. First Convolutional Layer
 ```bash
 convolution2dLayer(3, 32, 'Padding', 'same')
 ```
-- **필터 크기**: 3x3
-- **필터 수**: 32
-- **패딩**: 'same'으로 설정되어 입력과 출력의 크기가 동일하게 유지됩니다.
+- **Filter size**: 3x3
+- **Number of filters**: 32
+- **Padding**: Set to 'same', the input and output sizes remain the same.
 
-### 3. ReLU Activation
+#### 3. ReLU Activation
 ```bash
 reluLayer
 ```
-- **ReLU 활성화 함수**: 비선형성을 도입하여 모델의 학습 능력을 향상시킵니다.
+- **ReLU activation function**: Introduces nonlinearity to improve the model's learning capabilities.
 
-### 4. Second Convolutional Layer
+#### 4. Second Convolutional Layer
 ```bash
 convolution2dLayer(3, 32, 'Padding', 'same')
 ```
-- **필터 크기**: 3x3
-- **필터 수**: 32
-- **패딩**: 'same'으로 설정되어 입력과 출력의 크기가 동일하게 유지됩니다.
+- **Filter size**: 3x3
+- **Number of filters**: 32
+- **Padding**: Set to 'same', the input and output sizes remain the same.
 
-### 5. ReLU Activation
+#### 5. ReLU Activation
 ```bash
 reluLayer
 ```
-- **ReLU 활성화 함수**: 비선형성을 도입하여 모델의 학습 능력을 향상시킵니다.
+- **ReLU activation function**: Introduces nonlinearity to improve the model's learning capabilities.
 
-### 6. Dropout Layer
+#### 6. Dropout Layer
 ```bash
 dropoutLayer(0.3)
 ```
-- **드롭아웃 비율**: 30%의 입력 요소를 무작위로 0으로 설정하여 과적합을 방지합니다.
+- **Dropout ratio**: Set 30% of inputs to 0 at random to prevent overfitting.
 
-### 7. Max Pooling Layer
+#### 7. Max Pooling Layer
 ```bash
 maxPooling2dLayer(2, 'Stride', 2)
 ```
-- **풀링 크기**: 2x2
-- **스트라이드**: 2
-- **역할**: 공간적 차원을 줄이고 특징 맵의 크기를 절반으로 줄입니다.
+- **Pull size**: 2x2
+- **Stride**: 2
+- **Role**: Reduce spatial dimensions and halve the size of feature maps.
 
-### 8. Third Convolutional Layer
+#### 8. Third Convolutional Layer
 ```bash
 convolution2dLayer(3, 64, 'Padding', 'same')
 ```
-- **필터 크기**: 3x3
-- **필터 수**: 64
-- **패딩**: 'same'으로 설정되어 입력과 출력의 크기가 동일하게 유지됩니다.
+- **Filter size**: 3x3
+- **Number of filters**: 64
+- **Padding**: Set to 'same', the input and output sizes remain the same.
 
-### 9. ReLU Activation
+#### 9. ReLU Activation
 ```bash
 reluLayer
 ```
-- **ReLU 활성화 함수**: 비선형성을 도입하여 모델의 학습 능력을 향상시킵니다.
+- **ReLU activation function**: Introduces nonlinearity to improve the model's learning capabilities.
 
-### 10. Fourth Convolutional Layer
+#### 10. Fourth Convolutional Layer
 ```bash
 convolution2dLayer(3, 64, 'Padding', 'same')
 ```
-- **필터 크기**: 3x3
-- **필터 수**: 64
-- **패딩**: 'same'으로 설정되어 입력과 출력의 크기가 동일하게 유지됩니다.
+- **Filter size**: 3x3
+- **Number of filters**: 64
+- **Padding**: Set to 'same', the input and output sizes remain the same.
 
-### 11. ReLU Activation
+#### 11. ReLU Activation
 ```bash
 reluLayer
 ```
-- **ReLU 활성화 함수**: 비선형성을 도입하여 모델의 학습 능력을 향상시킵니다.
+- **ReLU activation function**: Introduces nonlinearity to improve the model's learning capabilities.
 
-### 12. Fifth Convolutional Layer
+#### 12. Fifth Convolutional Layer
 ```bash
 convolution2dLayer(3, 64, 'Padding', 'same')
 ```
-- **필터 크기**: 3x3
-- **필터 수**: 64
-- **패딩**: 'same'으로 설정되어 입력과 출력의 크기가 동일하게 유지됩니다.
+- **Filter size**: 3x3
+- **Number of filters**: 64
+- **Padding**: Set to 'same', the input and output sizes remain the same.
 
-### 13. ReLU Activation
+#### 13. ReLU Activation
 ```bash
 reluLayer
 ```
-- **ReLU 활성화 함수**: 비선형성을 도입하여 모델의 학습 능력을 향상시킵니다.
+- **ReLU activation function**: Introduces nonlinearity to improve the model's learning capabilities.
 
-### 14. Dropout Layer
+#### 14. Dropout Layer
 ```bash
 dropoutLayer(0.3)
 ```
-- **드롭아웃 비율**: 30%의 입력 요소를 무작위로 0으로 설정하여 과적합을 방지합니다.
+- **Dropout ratio**: Set 30% of inputs to 0 at random to prevent overfitting.
 
-### 15. Max Pooling Layer
+#### 15. Max Pooling Layer
 ```bash
 maxPooling2dLayer(2, 'Stride', 2)
 ```
-- **풀링 크기**: 2x2
-- **스트라이드**: 2
-- **역할**: 공간적 차원을 줄이고 특징 맵의 크기를 절반으로 줄입니다.
+- **Pull size**: 2x2
+- **Stride**: 2
+- **Role**: Reduce spatial dimensions and halve the size of feature maps.
 
-### 16. Batch Normalization Layer
+#### 16. Batch Normalization Layer
 ```bash
 batchNormalizationLayer
 ```
-- **배치 정규화**: 활성화 값을 정규화하여 학습 과정을 안정화시킵니다.
+- **Batch Normalization**: Normalize activation values to stabilize the learning process.
 
-### 17. Sixth Convolutional Layer
+#### 17. Sixth Convolutional Layer
 ```bash
 convolution2dLayer(3, 128, 'Padding', 'same')
 ```
-- **필터 크기**: 3x3
-- **필터 수**: 128
-- **패딩**: 'same'으로 설정되어 입력과 출력의 크기가 동일하게 유지됩니다.
+- **Filter size**: 3x3
+- **Number of filters**: 128
+- **Padding**: Set to 'same', the input and output sizes remain the same.
 
-### 18. ReLU Activation
+#### 18. ReLU Activation
 ```bash
 reluLayer
 ```
-- **ReLU 활성화 함수**: 비선형성을 도입하여 모델의 학습 능력을 향상시킵니다.
+- **ReLU activation function**: Introduces nonlinearity to improve the model's learning capabilities.
 
-### 19. Seventh Convolutional Layer
+#### 19. Seventh Convolutional Layer
 ```bash
 convolution2dLayer(3, 128, 'Padding', 'same')
 ```
-- **필터 크기**: 3x3
-- **필터 수**: 128
-- **패딩**: 'same'으로 설정되어 입력과 출력의 크기가 동일하게 유지됩니다.
+- **Filter size**: 3x3
+- **Number of filters**: 128
+- **Padding**: Set to 'same', the input and output sizes remain the same.
 
-### 20. ReLU Activation
+#### 20. ReLU Activation
 ```bash
 reluLayer
 ```
-- **ReLU 활성화 함수**: 비선형성을 도입하여 모델의 학습 능력을 향상시킵니다.
+- **ReLU activation function**: Introduces nonlinearity to improve the model's learning capabilities.
 
-### 21. Dropout Layer
+#### 21. Dropout Layer
 ```bash
 dropoutLayer(0.3)
 ```
-- **드롭아웃 비율**: 30%의 입력 요소를 무작위로 0으로 설정하여 과적합을 방지합니다.
+- **Dropout ratio**: Set 30% of inputs to 0 at random to prevent overfitting.
 
-### 22. Max Pooling Layer
-```bash
-maxPooling2dLayer(2, 'Stride', 2)
-```
-- **풀링 크기**: 2x2
-- **스트라이드**: 2
-- **역할**: 공간적 차원을 줄이고 특징 맵의 크기를 절반으로 줄입니다.
 
-### 23. Batch Normalization Layer
-```bash
-batchNormalizationLayer
-```
-- **배치 정규화**: 활성화 값을 정규화하여 학습 과정을 안정화시킵니다.
 
-### 24. Eighth Convolutional Layer
-```bash
-convolution2dLayer(3, 256, 'Padding', 'same')
-```
-- **필터 크기**: 3x3
-- **필터 수**: 256
-- **패딩**: 'same'으로 설정되어 입력과 출력의 크기가 동일하게 유지됩니다.
-
-### 25. ReLU Activation
-```bash
-reluLayer
-```
-- **ReLU 활성화 함수**: 비선형성을 도입하여 모델의 학습 능력을 향상시킵니다.
-
-### 26. Dropout Layer
-```bash
-dropoutLayer(0.3)
-```
-- **드롭아웃 비율**: 30%의 입력 요소를 무작위로 0으로 설정하여 과적합을 방지합니다.
-
-### 27. Max Pooling Layer
-```bash
-maxPooling2dLayer(2, 'Stride', 2)
-```
-- **풀링 크기**: 2x2
-- **스트라이드**: 2
-- **역할**: 공간적 차원을 줄이고 특징 맵의 크기를 절반으로 줄입니다.
-
-### 28. Batch Normalization Layer
-```bash
-batchNormalizationLayer
-```
-- **배치 정규화**: 활성화 값을 정규화하여 학습 과정을 안정화시킵니다.
-
-### 29. Fully Connected Layer
-```bash
-fullyConnectedLayer(512)
-```
-- **완전 연결 레이어**: 이전 레이어의 모든 뉴런을 512개의 뉴런과 연결합니다.
-
-### 30. ReLU Activation
-```bash
-reluLayer
-```
-- **ReLU 활성화 함수**: 비선형성을 도입하여 모델의 학습 능력을 향상시킵니다.
-
-### 31. Dropout Layer
-```bash
-dropoutLayer(0.3)
-```
-- **드롭아웃 비율**: 30%의 입력 요소를 무작위로 0으로 설정하여 과적합을 방지합니다.
-
-### 32. Fully Connected Layer (Output Layer)
-```bash
-fullyConnectedLayer(7)
-```
-- **완전 연결 레이어**: 이전 레이어의 모든 뉴런을 7개의 뉴런과 연결합니다. 이 레이어는 최종 출력 레이어로, 7개의 클래스에 대한 로짓(logits)을 생성합니다.
-
-### 33. Softmax Layer
-```bash
-softmaxLayer
-```
-- **소프트맥스 활성화 함수**: 로짓을 확률로 변환합니다. 각 클래스에 대한 확률을 계산합니다.
-
-### 34. Classification Layer
-```bash
-classificationLayer
-```
-- **분류 레이어**: 소프트맥스 출력을 기반으로 크로스 엔트로피 손실을 계산하고, 최종 분류 결과를 생성합니다.
-
-### 전체 구조 요약
-이 모델은
-	
+End of line.
