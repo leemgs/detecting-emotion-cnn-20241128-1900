@@ -9,7 +9,7 @@ The code below defines the architecture of the Convolutional Neural Network (CNN
 ┏━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━┓
 ┃ Layer (type)                   ┃ Output Shape          ┃       Param # ┃
 ┡━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━┩
-│ Input_Layer (InputLayer)        │ (None, 48, 48, 3)      │             0 │
+│ Input_Layer (InputLayer)        │ (None, 48, 48, 1)      │             0 │
 ├─────────────────────────────────┼────────────────────────┼───────────────┤
 │ Conv1 (Conv2D)                  │ (None, 48, 48, 32)     │           896 │
 ├─────────────────────────────────┼────────────────────────┼───────────────┤
@@ -87,7 +87,7 @@ When the images were inferred after training with this model, 99.2% accuracy was
 ```bash
 layers = [
     % Image Input Layer: Accepts color images of size 48x48
-    imageInputLayer([48 48 3])
+    imageInputLayer([48 48 1])
     
     % 1. First Convolutional Layer: Applies 32 filters of size 3x3 with same padding
     convolution2dLayer(3, 32, 'Padding', 'same')
