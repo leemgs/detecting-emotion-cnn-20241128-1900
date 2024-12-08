@@ -6,9 +6,9 @@ Furthermore, we prevent overfitting through dropout layers, and stabilize the le
 # Model Architecture
 The code below defines the architecture of the Convolutional Neural Network (CNN) model written by MATLAB. 
 ```bash
-┏━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━┓
-┃ Layer (type)                   ┃ Output Shape          ┃       Param # ┃
-┡━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━┩
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
+┃ Layer (type)                    ┃ Output Shape           ┃     Param #   ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
 │ Input_Layer (InputLayer)        │ (None, 48, 48, 1)      │             0 │
 ├─────────────────────────────────┼────────────────────────┼───────────────┤
 │ Conv1 (Conv2D)                  │ (None, 48, 48, 32)     │           896 │
