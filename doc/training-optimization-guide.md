@@ -29,7 +29,7 @@ There are many ways to improve model quality, and I can offer some specific sugg
 **2. Improving Model Architecture:**
 
 *   **Layer Depth and Width:**
-    *   The exact layer structure defined in the `layers` variable isn't given, making specific advice difficult. However, changing the depth and width of the model is an important approach.
+    *   The changing the depth and width of the model is an important approach.
     *   **Methods:**
         *   **Add/Remove Layers:** Add or remove convolutional layers, pooling layers, and fully connected layers to adjust model complexity.
         *   **Change Number of Filters:** Change the number of filters (number of channels) in convolutional layers to adjust model expressiveness.
