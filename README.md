@@ -160,6 +160,9 @@ Classification layer for the 7 classes
 ### USB Camera Integration
 
 The trained model is used for real-time emotion detection using a USB webcam (or IP camera).
+
+![camera-capture-flow](fake-usb-camera/camera-capture-flow.jpg)
+
 We will use a method that emulates a real USB camera to develop effectively. 
 Pre-prepared jpeg image files will be used as input for the fake camera device file to capture frames. 
 This method has been tested and reproduced on Ubuntu 22.04 and Ubuntu 24.04 versions. 
