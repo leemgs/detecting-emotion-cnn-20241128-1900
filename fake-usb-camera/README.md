@@ -1,5 +1,8 @@
 ### Setting Up and Testing a Fake USB Camera with Python
 
+!(camera-capture-flow)[camera-capturInstal.jpg]
+
+
 #### **1. Install the Virtual Loopback Device**
 To create a virtual USB camera device, you need to install and configure the `v4l2loopback` kernel module.
 
