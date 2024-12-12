@@ -1,6 +1,6 @@
 ### Setting Up and Testing a Fake USB Camera with Python
 
-!(camera-capture-flow)[camera-capturInstal.jpg]
+![camera-capture-flow](camera-capturInstal.jpg)
 
 
 #### **1. Install the Virtual Loopback Device**
